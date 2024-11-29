@@ -54,7 +54,7 @@ public class HelloController {
 
             // Parse the JSON response to extract the price
             String jsonString = response.body();
-            String price = jsonString.split("\"rate_float\":")[1].split("}")[0]; // Extracting price from JSON
+            String price = jsonString.split("\"CAD\":\\{")[1].split("\"rate_float\":")[1].split("}")[0];
 
             // Update the label with the fetched price in the JavaFX UI thread
             javafx.application.Platform.runLater(() ->

@@ -79,7 +79,7 @@ public class FetchGraph {
 
         try {
             // Build the API URL with the selected date range
-            String urlString = "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + from + "&end=" + to;
+            String urlString = "https://api.coindesk.com/v1/bpi/historical/close.json?start=" + from + "&end=" + to + "&currency=CAD";
             System.out.println("Generated URL: " + urlString);
 
             // Clear the previous chart data before making a new request
